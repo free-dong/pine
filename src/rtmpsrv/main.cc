@@ -16,7 +16,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 
-#include "rtmp_log.h"
+//#include "rtmp_log.h"
 
 #define APP_NAME	"live"
 
@@ -556,7 +556,7 @@ void handle_message(Client *client, RTMP_Message *msg)
                     if(flag < 10) {
                         flag ++;
 
-                        RTMP_LogHexString( 0, (uint8_t *)msg->buf.c_str(), msg->len >200?200:msg->len);
+                        //RTMP_LogHexString( 0, (uint8_t *)msg->buf.c_str(), msg->len >200?200:msg->len);
                     }
                     rtmp_send(receiver, MSG_VIDEO,
 						  STREAM_ID, msg->buf,
